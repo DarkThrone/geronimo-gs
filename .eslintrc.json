@@ -9,7 +9,9 @@
     "plugin:cypress/recommended",
     "plugin:jest/recommended",
     "plugin:jest/style",
-    "plugin:@typescript-eslint/recommended"
+    "plugin:@typescript-eslint/recommended",
+    "plugin:import/typescript",
+    "next"
   ],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {

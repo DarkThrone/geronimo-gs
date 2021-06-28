@@ -1,23 +1,27 @@
-import { CMS_NAME } from '../lib/constants'
+import { BLOG_SUBTITLE } from '../lib/constants';
 
-const Intro = () => {
-  return (
-    <section className="flex-col md:flex-row flex items-center md:justify-between mt-16 mb-16 md:mb-12">
-      <h1 className="text-6xl md:text-8xl font-bold tracking-tighter leading-tight md:pr-8">
-        Blog.
-      </h1>
-      <h4 className="text-center md:text-left text-lg mt-5 md:pl-8">
-        A statically generated blog example using{' '}
-        <a
-          href="https://nextjs.org/"
-          className="underline hover:text-success duration-200 transition-colors"
-        >
-          Next.js
-        </a>{' '}
-        and {CMS_NAME}.
-      </h4>
-    </section>
-  )
-}
+const iconStyle = {
+  width: 100,
+  height: 100,
+};
 
-export default Intro
+const Intro = () => (
+  <section className="flex-col flex items-center text-center">
+    <img
+      src="/assets/blog/icons/dark-throne-icon.svg"
+      alt=""
+      style={iconStyle}
+    />
+    <h1
+      className="text-6xl md:text-7xl font-bold tracking-tighter leading-tight"
+      data-cy="blog-title"
+    >
+      The
+      <br />
+      Dark Throne
+    </h1>
+    <h4 className="text-center md:text-left text-lg mt-5">{BLOG_SUBTITLE}</h4>
+  </section>
+);
+
+export default Intro;
