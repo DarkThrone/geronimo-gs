@@ -21,23 +21,16 @@
     "ecmaVersion": 12,
     "sourceType": "module"
   },
-  "plugins": [
-    "react",
-    "@typescript-eslint",
-    "jest",
-    "cypress"
-  ],
+  "plugins": ["react", "@typescript-eslint", "jest", "cypress"],
   "rules": {
     "react/react-in-jsx-scope": "off",
     "react/jsx-filename-extension": [
       1,
       {
-        "extensions": [
-          ".jsx",
-          ".tsx"
-        ]
+        "extensions": [".jsx", ".tsx"]
       }
     ],
-    "import/extensions": "off"
+    "import/extensions": "off",
+    "react/jsx-props-no-spreading": 0
   }
 }
