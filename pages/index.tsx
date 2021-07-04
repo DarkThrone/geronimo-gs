@@ -23,10 +23,9 @@ const Index = ({ allPosts }: Props) => (
         </title>
       </Head>
       <Container>
-        <Intro />
         {allPosts.length > 0 && (
           <section>
-            <div className="grid grid-cols-1 gap-y-20 md:gap-y-32 mb-16">
+            <div className="grid grid-cols-6 gap-y-20 md:gap-y-32 mb-16">
               {allPosts.map((post) => (
                 <PostPreview
                   key={post.slug}
@@ -48,16 +47,7 @@ const Index = ({ allPosts }: Props) => (
 export default Index;
 
 export const getStaticProps = async () => {
-  const allPosts = getAllPosts([
-    'title',
-    'date',
-    'slug',
-    'author',
-    'coverImage',
-    'excerpt',
-    'timeToRead',
-  ]);
-
+  const allPosts = getAllPosts();
   const rss = await generateRss(allPosts);
 
   fs.writeFileSync('./public/rss.xml', rss);

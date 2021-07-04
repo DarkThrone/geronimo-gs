@@ -1,22 +1,30 @@
+import { ReactNode } from 'react';
 import Alert from './alert';
 import Footer from './footer';
 import Meta from './meta';
+import Navigation from './navigation';
+import useIntersectionObserver from '../lib/hooks/useIntersectionObserver';
 
 type Props = {
   preview?: boolean;
-  children: React.ReactNode;
+  children: ReactNode;
 };
 
-const Layout = ({ preview, children }: Props) => (
-  <>
-    <Meta />
-    <div className="min-h-screen">
-      <Alert preview={preview} />
-      <main>{children}</main>
-    </div>
-    <Footer />
-  </>
-);
+const Layout = ({ preview, children }: Props) => {
+  const { Notifier, isVisible } = useIntersectionObserver();
+
+  return (
+    <>
+      <Meta />
+      <Notifier />
+      <Navigation shadow={!isVisible} />
+      <div className="min-h-screen mt-32">
+        <main>{children}</main>
+      </div>
+      <Footer />
+    </>
+  );
+};
 
 Layout.defaultProps = {
   preview: false,

@@ -10,10 +10,8 @@ type Props = {
   timeToRead: number;
 };
 
-const PostPreview = ({
-  title, timeToRead, date, excerpt, slug,
-}: Props) => (
-  <div>
+const PostPreview = ({ title, timeToRead, date, excerpt, slug }: Props) => (
+  <div className="col-start-2 col-span-4">
     <h3 className="text-3xl mb-3 leading-snug">
       <Link as={`/posts/${slug}`} href="/posts/[slug]" passHref>
         <a href="dummy" className="hover:underline">
@@ -22,10 +20,7 @@ const PostPreview = ({
       </Link>
     </h3>
     <div className="text-lg mb-8">
-      <DateFormatter dateString={date} />
-      {' '}
-      -
-      {' '}
+      <DateFormatter dateString={date} /> -{' '}
       <ReadingTime timeToRead={timeToRead} />
     </div>
     <p className="text-lg leading-relaxed mb-4">{excerpt}</p>
