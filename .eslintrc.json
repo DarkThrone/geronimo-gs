@@ -3,16 +3,6 @@
     "browser": true,
     "es2021": true
   },
-  "extends": [
-    "airbnb",
-    "plugin:react/recommended",
-    "plugin:cypress/recommended",
-    "plugin:jest/recommended",
-    "plugin:jest/style",
-    "plugin:@typescript-eslint/recommended",
-    "plugin:import/typescript",
-    "next"
-  ],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
     "ecmaFeatures": {
@@ -22,15 +12,23 @@
     "sourceType": "module"
   },
   "plugins": ["react", "@typescript-eslint", "jest", "cypress"],
+  "extends": [
+    "airbnb",
+    "plugin:react/recommended",
+    "plugin:cypress/recommended",
+    "plugin:jest/recommended",
+    "plugin:jest/style",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:import/typescript",
+    "next",
+    "prettier"
+  ],
   "rules": {
-    "react/react-in-jsx-scope": "off",
-    "react/jsx-filename-extension": [
-      1,
-      {
-        "extensions": [".jsx", ".tsx"]
-      }
-    ],
-    "import/extensions": "off",
-    "react/jsx-props-no-spreading": 0
+    "import/extensions": 0,
+    "@typescript-eslint/explicit-module-boundary-types": 0,
+    "react/react-in-jsx-scope": 0,
+    "react/jsx-props-no-spreading": 0,
+    "react/self-closing-comp": 0,
+    "react/jsx-filename-extension": [1, { "extensions": [".jsx", ".tsx"] }]
   }
 }
