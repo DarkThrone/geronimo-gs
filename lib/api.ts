@@ -2,49 +2,56 @@ import fs from 'fs';
 import { join } from 'path';
 import matter from 'gray-matter';
 import readingTime from 'reading-time';
+import { FrontMatter } from './mdxToHtml';
 
 const postsDirectory = join(process.cwd(), '_posts');
 
+// Get mdx slugs
 export function getPostSlugs() {
-  return fs.readdirSync(postsDirectory);
+  return fs.readdirSync(postsDirectory).filter((path) => /\.mdx?$/.test(path));
 }
 
-export function getPostBySlug(slug: string, fields: string[] = []) {
-  const realSlug = slug.replace(/\.md$/, '');
-  const fullPath = join(postsDirectory, `${realSlug}.md`);
-  const fileContents = fs.readFileSync(fullPath, 'utf8');
-  const { data, content } = matter(fileContents);
+const getPostData = (slug: string) => ({
+  source: fs.readFileSync(join(postsDirectory, slug)),
+  realSlug: slug.replace(/\.mdx?$/, ''),
+});
 
-  type Items = {
-    [key: string]: string;
+export type Author = {
+  name: string;
+  picture: string;
+};
+
+export type Post = {
+  title: string;
+  author: Author;
+  date: string;
+  slug: string;
+  content: string;
+  excerpt: string;
+  timeToRead: number;
+  frontMatter: FrontMatter;
+};
+
+export function getPostBySlug(slug: string) {
+  const { realSlug, source } = getPostData(slug);
+  const { content, data } = matter(source);
+
+  const { title, author, date, excerpt } = data;
+
+  return {
+    title,
+    author,
+    date,
+    excerpt,
+    slug: realSlug,
+    content,
+    timeToRead: readingTime(content).minutes,
+    frontMatter: data,
   };
-
-  const items: Items = {};
-
-  data.timeToRead = readingTime(content).minutes;
-
-  // Ensure only the minimal needed data is exposed
-  fields.forEach((field) => {
-    if (field === 'slug') {
-      items[field] = realSlug;
-    }
-    if (field === 'content') {
-      items[field] = content;
-    }
-
-    if (data[field]) {
-      items[field] = data[field];
-    }
-  });
-
-  return items;
 }
 
-export function getAllPosts(fields: string[] = []) {
-  const slugs = getPostSlugs();
-  const posts = slugs
-    .map((slug) => getPostBySlug(slug, fields))
-    // sort posts by date in descending order
+export function getAllPosts() {
+  return getPostSlugs()
+    .map(getPostBySlug)
     .sort((post1, post2) => (post1.date > post2.date ? -1 : 1));
-  return posts;
 }
