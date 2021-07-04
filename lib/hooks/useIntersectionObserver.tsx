@@ -80,20 +80,24 @@ const useIntersectionObserver = (
     intersectionObserverCallback,
   ]);
 
-  const Notifier = () => <div style={style} ref={observedRef}>.</div>;
+  const Notifier = () => (
+    <div style={style} ref={observedRef}>
+      .
+    </div>
+  );
 
   // This is the cleanup code, keep it atomic here
   useEffect(
     () => () => {
       unobserve();
     },
-    [unobserve],
+    [unobserve, isVisible],
   );
 
   useEffect(() => {
     unobserve();
     observe();
-  }, [unobserve, observe]);
+  }, [unobserve, observe, isVisible]);
 
   return {
     isVisible,
