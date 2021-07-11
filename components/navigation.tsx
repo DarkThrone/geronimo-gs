@@ -1,7 +1,7 @@
 import cx from 'classnames';
 import Link from 'next/link';
 import Logo, { LogoSize } from './logo';
-import TwtrSvg from '../public/assets/blog/icons/twitter-hollow.svg';
+import Twitter from './Twitter';
 
 const getSize: (shadow: boolean) => LogoSize = (shadow) =>
   shadow ? 'sm' : 'lg';
@@ -38,11 +38,7 @@ const Navigation = ({ shadow }: NavigationProps) => (
             Uses
           </a>
         </Link>
-        <Link href="https://twitter.com/geronimogarcia" passHref>
-          <a className="flex-initial h-6 text-green-400" href="dummy">
-            <TwtrSvg className="fill-current" atl="The twitter bird" />
-          </a>
-        </Link>
+        <Twitter hollow />
       </nav>
     </div>
   </div>

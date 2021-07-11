@@ -4,9 +4,9 @@ type Props = {
   title: string;
 };
 
-const Title = ({ title }: Props) => (
+const Title = ({ title: postTitle }: Props) => (
   <title>
-    {title} | {BLOG_TITLE}
+    {postTitle} | {BLOG_TITLE}
   </title>
 );
 
