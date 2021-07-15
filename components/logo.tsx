@@ -1,6 +1,6 @@
 import cx from 'classnames';
-import Image from 'next/image';
 import Link from 'next/link';
+import DarkThroneSvg from '../public/assets/blog/icons/dark-throne-icon.svg';
 
 export type LogoSize = 'sm' | 'lg';
 
@@ -16,7 +16,7 @@ const isLg = isSize('lg');
 const Logo = ({ size = 'lg' }: LogoProps) => {
   const sm = isSm(size);
   const lg = isLg(size);
-  const imgSize = lg ? 64 : 48;
+  const imgSize = lg ? { width: 64, height: 64 } : { width: 48, height: 48 };
 
   const titleCls = cx(' flex-1 font-bold tracking-tighter leading-tight', {
     'text-3xl': lg,
@@ -26,13 +26,9 @@ const Logo = ({ size = 'lg' }: LogoProps) => {
   return (
     <Link href="/" passHref>
       <a href="dummy" className="space-x-3 flex flex-initial items-center">
-        <Image
-          className="flex-initial"
-          src="/assets/blog/icons/dark-throne-icon.svg"
-          alt="A Throne of sword"
-          height={imgSize}
-          width={imgSize}
-        />
+        <div className="flex-initial" style={imgSize}>
+          <DarkThroneSvg />
+        </div>
         <div className={titleCls} data-cy="blog-title">
           The Dark Throne
         </div>

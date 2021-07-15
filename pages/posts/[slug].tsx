@@ -21,6 +21,7 @@ type Props = {
 
 const components = {
   code: Code,
+  br: <br />,
 };
 
 const Post = ({ source, post, preview }: Props) => {
