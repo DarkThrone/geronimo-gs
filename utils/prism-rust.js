@@ -1,4 +1,4 @@
-export default function (Prism) {
+export default function RustPrism(Prism) {
   function replacer(multiline) {
     return function () {
       return multiline;

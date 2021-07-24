@@ -10,6 +10,8 @@ const Twitter = () => (
         width: 24,
       }}
       href="dummy"
+      rel="noreferrer"
+      target="_blank"
     >
       <GithubSvg className="fill-current" atl="Github octocat" />
     </a>

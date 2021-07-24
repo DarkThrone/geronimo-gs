@@ -15,6 +15,8 @@ const Twitter = ({ hollow = false }: Props) => (
         width: 24,
       }}
       href="dummy"
+      rel="noreferrer"
+      target="_blank"
     >
       {hollow ? (
         <TwitterHollowSvg className="fill-current" atl="The twitter bird" />

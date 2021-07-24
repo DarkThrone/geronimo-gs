@@ -1,23 +1,13 @@
 import fs from 'fs';
 import Head from 'next/head';
-import PostHeader from '@/components/post-header';
-import PostBody from '@/components/post-body';
-import { MDXRemote } from 'next-mdx-remote';
 import Container from '../components/container';
-import Intro from '../components/intro';
 import Layout from '../components/layout';
 import { getAllPosts } from '../lib/api';
 import { BLOG_TITLE } from '../lib/constants';
-import { BlogPost } from '../types/post';
-import PostPreview from '../components/post-preview';
 import { generateRss } from '../lib/rss';
 import AtlassianSvg from '../public/assets/blog/icons/atlassian.svg';
 
-type Props = {
-  allPosts: BlogPost[];
-};
-
-const Index = ({ allPosts }: Props) => (
+const Index = () => (
   <>
     <Layout>
       <Head>
@@ -65,13 +55,11 @@ const Index = ({ allPosts }: Props) => (
 
 export default Index;
 
-export const getStaticProps = async () => {
-  const allPosts = getAllPosts();
-  const rss = await generateRss(allPosts);
-
-  fs.writeFileSync('./public/rss.xml', rss);
-
-  return {
-    props: { allPosts },
-  };
-};
+// export const getStaticProps = async () => {
+//   const allPosts = getAllPosts();
+//   const rss = await generateRss(allPosts);
+//
+//   fs.writeFileSync('./public/rss.xml', rss);
+//
+//
+// };

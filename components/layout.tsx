@@ -18,7 +18,7 @@ const Layout = ({ preview, children }: Props) => {
       <Meta />
       <Notifier />
       <Navigation shadow={!isVisible} />
-      <div className="min-h-screen mt-32">
+      <div className="min-h-screen pt-32">
         <main>{children}</main>
       </div>
       <Footer />

@@ -17,20 +17,10 @@ const Navigation = ({ shadow }: NavigationProps) => (
   >
     <div className="container flex justify-between items-stretch w-full mx-auto bg-white items-center">
       <Logo size={getSize(shadow)} />
-      <nav className="flex-initial flex items-center space-x-4">
-        <Link href="/" passHref>
-          <a className="flex-initial h-6" href="dummy">
-            Home
-          </a>
-        </Link>
+      <nav className="flex-initial flex items-center space-x-8">
         <Link href="/articles" passHref>
           <a className="flex-initial h-6" href="dummy">
             Articles
-          </a>
-        </Link>
-        <Link href="/contact" passHref>
-          <a className="flex-initial h-6" href="dummy">
-            Contact
           </a>
         </Link>
         <Link href="/uses" passHref>
