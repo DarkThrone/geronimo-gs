@@ -1,0 +1,26 @@
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://geronimo.gs_posts/!dynamic-routing</loc>
+    <changefreq>hourly</changefreq>
+  </url>
+  <url>
+    <loc>https://geronimo.gs_posts/!using-mdx-and-next-together</loc>
+    <changefreq>hourly</changefreq>
+  </url>
+  <url>
+    <loc>https://geronimo.gs_posts/hello-world</loc>
+    <changefreq>hourly</changefreq>
+  </url>
+  <url>
+    <loc>https://geronimo.gs/articles</loc>
+    <changefreq>hourly</changefreq>
+  </url>
+  <url>
+    <loc>https://geronimo.gs</loc>
+    <changefreq>hourly</changefreq>
+  </url>
+  <url>
+    <loc>https://geronimo.gs/uses</loc>
+    <changefreq>hourly</changefreq>
+  </url>
+</urlset>

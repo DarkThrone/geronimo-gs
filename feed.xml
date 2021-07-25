@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title><![CDATA[The DarkThrone]]></title>
+        <description><![CDATA[Random ramblings and rants, with a tiny bit of sense.]]></description>
+        <link>https://geronimo.gs</link>
+        <generator>RSS for Node</generator>
+        <lastBuildDate>Sun, 25 Jul 2021 10:05:06 GMT</lastBuildDate>
+        <atom:link href="https://geronimo.gs/feed.xml" rel="self" type="application/rss+xml"/>
+        <language><![CDATA[en_US]]></language>
+        <item>
+            <title><![CDATA[Dynamic Routing and Static Generation]]></title>
+            <description><![CDATA[Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Praesent elementum facilisis leo vel fringilla est ullamcorper eget.]]></description>
+            <link>https://geronimo.gs/posts/!dynamic-routing</link>
+            <guid isPermaLink="true">https://geronimo.gs/posts/!dynamic-routing</guid>
+            <dc:creator><![CDATA[JJ Kasper]]></dc:creator>
+            <pubDate>Mon, 16 Mar 2020 05:35:07 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Hello world!]]></title>
+            <description><![CDATA[A small introduction to the blog]]></description>
+            <link>https://geronimo.gs/posts/hello-world</link>
+            <guid isPermaLink="true">https://geronimo.gs/posts/hello-world</guid>
+            <dc:creator><![CDATA[Geronimo Garcia Sgritta]]></dc:creator>
+            <pubDate>Sun, 25 Jul 2021 09:45:29 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Using Next.js and MDX to create a simple blog]]></title>
+            <link>https://geronimo.gs/posts/!using-mdx-and-next-together</link>
+            <guid isPermaLink="true">https://geronimo.gs/posts/!using-mdx-and-next-together</guid>
+            <dc:creator><![CDATA[Geronimo Garcia Sgritta]]></dc:creator>
+            <pubDate>Sun, 25 Jul 2021 09:00:37 GMT</pubDate>
+        </item>
+    </channel>
+</rss>
