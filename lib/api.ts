@@ -8,7 +8,9 @@ const postsDirectory = join(process.cwd(), '_posts');
 
 // Get mdx slugs
 export function getPostSlugs() {
-  return fs.readdirSync(postsDirectory).filter((path) => /\.mdx?$/.test(path));
+  return fs
+    .readdirSync(postsDirectory)
+    .filter((path) => /^[^!]+\.mdx?$/.test(path));
 }
 
 const getPostData = (slug: string) => ({

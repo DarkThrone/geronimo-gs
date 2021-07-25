@@ -9,7 +9,6 @@ import Layout from '../../components/layout';
 import { getAllPosts, getPostBySlug } from '../../lib/api';
 import mdxToHtml from '../../lib/mdxToHtml';
 import { BlogPost } from '../../types/post';
-import Title from '../../components/title';
 import Code from '../../components/code';
 import { BLOG_TITLE } from '../../lib/constants';
 
