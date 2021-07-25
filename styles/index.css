@@ -53,8 +53,7 @@
 
 .menu {
   transition: max-height 0.5s linear;
-  overflow: clip;
-  top: 100px;
+  overflow: hidden;
   max-height: 500px;
   flex-basis: 100%;
 }

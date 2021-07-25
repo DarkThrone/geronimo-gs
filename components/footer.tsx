@@ -13,7 +13,7 @@ const Footer = () => (
           &copy; 2021 Geronimo Garcia Sgritta. All rights reserved.
         </div>
         <div className="flex-initial flex items-center space-x-1">
-          <a href="/rss.xml" rel="noreferrer" target="_blank">
+          <a href="/feed.xml" rel="noreferrer" target="_blank">
             rss
           </a>
           <ItemSpacer />
