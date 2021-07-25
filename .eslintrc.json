@@ -11,24 +11,68 @@
     "ecmaVersion": 12,
     "sourceType": "module"
   },
-  "plugins": ["react", "@typescript-eslint", "jest", "cypress"],
+  "plugins": [
+    "react",
+    "jest",
+    "cypress"
+  ],
   "extends": [
     "airbnb",
     "plugin:react/recommended",
     "plugin:cypress/recommended",
     "plugin:jest/recommended",
     "plugin:jest/style",
-    "plugin:@typescript-eslint/recommended",
-    "plugin:import/typescript",
     "next",
     "prettier"
   ],
   "rules": {
-    "import/extensions": 0,
-    "@typescript-eslint/explicit-module-boundary-types": 0,
-    "react/react-in-jsx-scope": 0,
-    "react/jsx-props-no-spreading": 0,
-    "react/self-closing-comp": 0,
-    "react/jsx-filename-extension": [1, { "extensions": [".jsx", ".tsx"] }]
-  }
+    "import/no-extraneous-dependencies": [
+      "error",
+      {
+        "devDependencies": [
+          "scripts/**/*.js",
+          "tests/**/*.js",
+          "tests/**/*.jsx",
+          "tests/**/*.ts",
+          "tests/**/*.tsx"
+        ]
+      }
+    ]
+  },
+  "overrides": [
+    {
+      "files": [
+        "*.ts",
+        "*.tsx"
+      ],
+      "excludedFiles": [
+        "*.js",
+        "*.test.js",
+        "gatsby-node.js",
+        "gatsby-config.js"
+      ],
+      "plugins": [
+        "@typescript-eslint"
+      ],
+      "extends": [
+        "plugin:@typescript-eslint/recommended",
+        "plugin:react/recommended"
+      ],
+      "rules": {
+        "import/extensions": 0,
+        "react/react-in-jsx-scope": 0,
+        "react/jsx-props-no-spreading": 0,
+        "react/self-closing-comp": 0,
+        "react/jsx-filename-extension": [
+          1,
+          {
+            "extensions": [
+              ".tsx"
+            ]
+          }
+        ],
+        "@typescript-eslint/explicit-module-boundary-types": 0
+      }
+    }
+  ]
 }

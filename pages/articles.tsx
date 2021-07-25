@@ -1,9 +1,7 @@
-import fs from 'fs';
 import Head from 'next/head';
 import Layout from '@/components/layout';
 import Container from '@/components/container';
 import PostPreview from '@/components/post-preview';
-import { generateRss } from '@/lib/rss';
 import { getAllPosts } from '@/lib/api';
 import { BLOG_TITLE } from '@/lib/constants';
 import { BlogPost } from '@/types/post';
@@ -47,9 +45,6 @@ export default Index;
 
 export const getStaticProps = async () => {
   const allPosts = getAllPosts();
-  const rss = await generateRss(allPosts);
-
-  fs.writeFileSync('./public/rss.xml', rss);
 
   return {
     props: { allPosts },

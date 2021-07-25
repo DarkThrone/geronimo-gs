@@ -51,6 +51,18 @@
     leading-snug;
 }
 
+.menu {
+  transition: max-height 0.5s linear;
+  overflow: clip;
+  top: 100px;
+  max-height: 500px;
+  flex-basis: 100%;
+}
+
+.menu-open {
+  max-height: 500px;
+}
+
 .markdown h1 {
   @apply text-5xl;
 }

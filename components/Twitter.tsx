@@ -9,7 +9,7 @@ type Props = {
 const Twitter = ({ hollow = false }: Props) => (
   <Link href="https://twitter.com/geronimogarcia" passHref>
     <a
-      className="flex-initial h-6 text-gray-700 hover:text-blue-400 transition-colors"
+      className="flex-initial h-12 lg:h-6 text-gray-700 hover:text-blue-400 transition-colors"
       style={{
         height: 24,
         width: 24,

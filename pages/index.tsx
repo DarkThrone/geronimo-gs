@@ -1,10 +1,7 @@
-import fs from 'fs';
 import Head from 'next/head';
 import Container from '../components/container';
 import Layout from '../components/layout';
-import { getAllPosts } from '../lib/api';
 import { BLOG_TITLE } from '../lib/constants';
-import { generateRss } from '../lib/rss';
 import AtlassianSvg from '../public/assets/blog/icons/atlassian.svg';
 
 const Index = () => (
@@ -54,12 +51,3 @@ const Index = () => (
 );
 
 export default Index;
-
-// export const getStaticProps = async () => {
-//   const allPosts = getAllPosts();
-//   const rss = await generateRss(allPosts);
-//
-//   fs.writeFileSync('./public/rss.xml', rss);
-//
-//
-// };
