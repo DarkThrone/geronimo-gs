@@ -4,7 +4,7 @@
         <description><![CDATA[Random ramblings and rants, with a tiny bit of sense.]]></description>
         <link>https://geronimo.gs</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Sun, 25 Jul 2021 12:05:16 GMT</lastBuildDate>
+        <lastBuildDate>Sun, 22 Aug 2021 08:16:42 GMT</lastBuildDate>
         <atom:link href="https://geronimo.gs/feed.xml" rel="self" type="application/rss+xml"/>
         <language><![CDATA[en_US]]></language>
         <item>
@@ -16,19 +16,19 @@
             <pubDate>Mon, 16 Mar 2020 05:35:07 GMT</pubDate>
         </item>
         <item>
+            <title><![CDATA[Using Next.js and MDX to create a simple blog]]></title>
+            <link>https://geronimo.gs/posts/!using-mdx-and-next-together</link>
+            <guid isPermaLink="true">https://geronimo.gs/posts/!using-mdx-and-next-together</guid>
+            <dc:creator><![CDATA[Geronimo Garcia Sgritta]]></dc:creator>
+            <pubDate>Sun, 25 Jul 2021 09:00:37 GMT</pubDate>
+        </item>
+        <item>
             <title><![CDATA[Hello world!]]></title>
             <description><![CDATA[A small introduction to the blog]]></description>
             <link>https://geronimo.gs/posts/hello-world</link>
             <guid isPermaLink="true">https://geronimo.gs/posts/hello-world</guid>
             <dc:creator><![CDATA[Geronimo Garcia Sgritta]]></dc:creator>
             <pubDate>Sun, 25 Jul 2021 09:45:29 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[Using Next.js and MDX to create a simple blog]]></title>
-            <link>https://geronimo.gs/posts/!using-mdx-and-next-together</link>
-            <guid isPermaLink="true">https://geronimo.gs/posts/!using-mdx-and-next-together</guid>
-            <dc:creator><![CDATA[Geronimo Garcia Sgritta]]></dc:creator>
-            <pubDate>Sun, 25 Jul 2021 09:00:37 GMT</pubDate>
         </item>
     </channel>
 </rss>
