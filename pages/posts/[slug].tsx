@@ -2,15 +2,16 @@ import { useRouter } from 'next/router';
 import ErrorPage from 'next/error';
 import Head from 'next/head';
 import { MDXRemote, MDXRemoteSerializeResult } from 'next-mdx-remote';
-import Container from '../../components/container';
-import PostBody from '../../components/post-body';
-import PostHeader from '../../components/post-header';
-import Layout from '../../components/layout';
-import { getAllPosts, getPostBySlug } from '../../lib/api';
-import mdxToHtml from '../../lib/mdxToHtml';
-import { BlogPost } from '../../types/post';
-import Code from '../../components/code';
-import { BLOG_TITLE } from '../../lib/constants';
+import Newsletter from '@/components/Newsletter';
+import Container from '@/components/container';
+import PostBody from '@/components/post-body';
+import PostHeader from '@/components/post-header';
+import Layout from '@/components/layout';
+import { getAllPosts, getPostBySlug } from '@/lib/api';
+import mdxToHtml from '@/lib/mdxToHtml';
+import { BlogPost } from '@/types/post';
+import Code from '@/components/code';
+import { BLOG_TITLE } from '@/lib/constants';
 
 type Props = {
   post: BlogPost;
@@ -47,6 +48,14 @@ const Post = ({ source, post, preview }: Props) => {
           <PostBody>
             <MDXRemote {...source} components={components} />
           </PostBody>
+          <Newsletter
+            form={{
+              id: 2531677,
+              title: 'Wanna hear more?',
+              subTitle:
+                'I sent an email every once in a while, I try not to be spammy. Usually when a few articles have been released!',
+            }}
+          />
         </article>
       </Container>
     </Layout>

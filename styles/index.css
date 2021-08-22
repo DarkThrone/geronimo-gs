@@ -29,10 +29,9 @@
 .markdown p,
 .markdown ul,
 .markdown ol {
-  @apply tracking-wider
+  @apply tracking-normal
     leading-7
-    text-lg
-    font-light;
+    text-lg;
 }
 
 .markdown ul {
