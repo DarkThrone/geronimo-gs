@@ -17,7 +17,7 @@ function addPage(page) {
 async function generateSitemap() {
   // Ignore Next.js specific files (e.g., _app.js) and API routes.
   const pages = await globby([
-    '_posts/*.mdx',
+    '_posts/[^!]*.mdx',
     'pages/**/*.{ts,tsx}',
     '!pages/**/[*.{ts,tsx}',
     '!pages/_*.{ts,tsx}',
