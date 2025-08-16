@@ -10,7 +10,7 @@ const Footer = () => (
     <Container>
       <div className="container flex justify-between items-stretch w-full mx-auto bg-white items-center">
         <div className="space-x-3 flex flex-initial items-center">
-          &copy; 2021 Geronimo Garcia Sgritta. All rights reserved.
+          &copy; 2025 Geronimo Garcia Sgritta. All rights reserved.
         </div>
         <div className="flex-initial flex items-center space-x-1">
           <a href="/feed.xml" rel="noreferrer" target="_blank">
