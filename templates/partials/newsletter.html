@@ -1,0 +1,22 @@
+<form class="newsletter" action="https://app.convertkit.com/forms/{{ config.extra.convertkit_form_id }}/subscriptions" method="post">
+  <div class="newsletter-inner">
+    <div class="newsletter-content">
+      <h3 class="newsletter-title">Wanna hear more?</h3>
+      <p>I sent an email every once in a while, I try not to be spammy. Usually when a few articles have been released!</p>
+
+      <div class="newsletter-fields">
+        <label for="fields[first_name]" class="newsletter-label">
+          First Name
+          <input class="newsletter-input" aria-label="Your first name" name="fields[first_name]" placeholder="Jane" id="fields[first_name]" type="text" required>
+        </label>
+        <label for="email_address" class="newsletter-label">
+          Email
+          <input class="newsletter-input" name="email_address" id="email_address" aria-label="Your email address" placeholder="jane@acme.com" required type="email">
+        </label>
+        <button type="submit" class="newsletter-submit">
+          <span>Yup, sign me up!</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</form>

@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block title %}<title>{{ page.title }} | {{ config.title }}</title>{% endblock title %}
+
+{% block content %}
+<div class="container">
+  <article class="mb-32">
+    <h1 class="post-title">{{ page.title }}</h1>
+    <div class="post-header-meta">
+      <time datetime="{{ page.date }}">{{ page.date | date(format="%B %-d, %Y") }}</time> -
+      <span>&#x23F3; {{ page.reading_time }} {{ page.reading_time | pluralize(singular="minute", plural="minutes") }} to read</span>
+    </div>
+    <div class="content-narrow">
+      <div class="markdown">
+        {{ page.content | safe }}
+      </div>
+    </div>
+    {% include "partials/newsletter.html" %}
+  </article>
+</div>
+{% endblock content %}
