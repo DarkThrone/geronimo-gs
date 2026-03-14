@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block title %}<title>{{ config.title }}'s Blog</title>{% endblock title %}
+
+{% block content %}
+<div class="container">
+  <section>
+    <div class="content-narrow">
+      {% for page in section.pages %}
+      <div class="post-preview">
+        <a href="{{ page.permalink }}" class="post-preview-link">
+          <h2 class="post-preview-title">{{ page.title }}</h2>
+          <div class="post-preview-meta">
+            <time datetime="{{ page.date }}">{{ page.date | date(format="%B %-d, %Y") }}</time> -
+            <span>&#x23F3; {{ page.reading_time }} {{ page.reading_time | pluralize(singular="minute", plural="minutes") }} to read</span>
+          </div>
+          <p class="post-preview-excerpt">{{ page.description }}</p>
+        </a>
+      </div>
+      {% endfor %}
+    </div>
+  </section>
+</div>
+{% endblock content %}

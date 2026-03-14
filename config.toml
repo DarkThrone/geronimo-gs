@@ -1,0 +1,24 @@
+# Zola configuration for The DarkThrone blog
+base_url = "https://geronimo.gs"
+title = "The DarkThrone"
+description = "Random ramblings and rants, with a tiny bit of sense."
+compile_sass = true
+build_search_index = false
+generate_feeds = true
+feed_filenames = ["atom.xml"]
+minify_html = true
+
+[markdown]
+highlight_code = true
+highlight_theme = "base16-ocean-dark"
+smart_punctuation = true
+
+[slugify]
+paths = "on"
+
+[extra]
+author = "Geronimo Garcia Sgritta"
+twitter = "https://twitter.com/geronimogarcia"
+github = "https://github.com/darkthrone"
+og_image = "/assets/blog/icons/dark-throne-icon.svg"
+convertkit_form_id = 2531677
