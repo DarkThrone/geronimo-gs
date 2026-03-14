@@ -1,31 +1,31 @@
 <div id="navbar" class="navbar">
   <div class="nav-container">
-    <a href="/" class="logo-link">
+    <a href="{{ get_url(path='/') }}" class="logo-link">
       <div id="logo-icon" class="logo-icon">
-        <img src="/assets/blog/icons/dark-throne-icon.svg" alt="The Dark Throne" width="64" height="64">
+        <img src="{{ get_url(path='assets/blog/icons/dark-throne-icon.svg') }}" alt="The Dark Throne" width="64" height="64">
       </div>
       <div id="logo-title" class="logo-title text-3xl">
         The Dark Throne
       </div>
     </a>
     <button type="button" id="menu-toggle" class="menu-toggle">
-      <img src="/assets/blog/icons/menu-icon.svg" alt="Menu" width="24" height="24">
+      <img src="{{ get_url(path='assets/blog/icons/menu-icon.svg') }}" alt="Menu" width="24" height="24">
     </button>
     <nav class="desktop-nav">
-      <a href="/blog/">Articles</a>
-      <a href="/uses/">Uses</a>
+      <a href="{{ get_url(path='blog/') }}">Articles</a>
+      <a href="{{ get_url(path='uses/') }}">Uses</a>
       <div class="nav-social">
         <a href="{{ config.extra.twitter }}" target="_blank" rel="noreferrer" class="social-icon" aria-label="Twitter">
-          <img src="/assets/blog/icons/twitter-hollow.svg" alt="Twitter" width="24" height="24">
+          <img src="{{ get_url(path='assets/blog/icons/twitter-hollow.svg') }}" alt="Twitter" width="24" height="24">
         </a>
       </div>
     </nav>
     <nav id="mobile-nav" class="mobile-nav max-h-0">
       <div class="mobile-nav-inner">
-        <a href="/blog/">Articles</a>
-        <a href="/uses/">Uses</a>
+        <a href="{{ get_url(path='blog/') }}">Articles</a>
+        <a href="{{ get_url(path='uses/') }}">Uses</a>
         <a href="{{ config.extra.twitter }}" target="_blank" rel="noreferrer" class="social-icon" aria-label="Twitter">
-          <img src="/assets/blog/icons/twitter-hollow.svg" alt="Twitter" width="24" height="24">
+          <img src="{{ get_url(path='assets/blog/icons/twitter-hollow.svg') }}" alt="Twitter" width="24" height="24">
         </a>
       </div>
     </nav>
